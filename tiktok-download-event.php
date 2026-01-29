@@ -1,49 +1,186 @@
-<?php
-// ===============================
-// TikTok Events API – Download
-// ===============================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FlyingChess – Pakistan No 1 Game</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-// 🔐 KEEP THIS SECRET
-$accessToken = 'YOUR_ACCESS_TOKEN_HERE';
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndfer(ttq,ttq.methods[i]);
+  }(window, document, 'ttq'));
+  </script>
+  <!-- TikTok Pixel Code End -->
 
-$payload = [
-  "event_source" => "web",
-  "event_source_id" => "D5TL63BC77UECCBSFML0",
-  "data" => [
-    [
-      "event" => "Download",
-      "event_time" => time(),
-      "user" => [
-        "email" => null,
-        "phone" => null,
-        "external_id" => null
-      ],
-      "properties" => [
-        "currency" => "PKR",
-        "content_type" => "product"
-      ],
-      "page" => [
-        "url" => $_SERVER['HTTP_REFERER'] ?? '',
-        "referrer" => $_SERVER['HTTP_REFERER'] ?? ''
-      ]
-    ]
-  ]
-];
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;
+    var ttq=w[t]=w[t]||[];
+    ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"];
+    ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}; 
+    for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+    ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
+    ttq.load=function(e,n){
+      var r="https://analytics.tiktok.com/i18n/pixel/events.js";
+      ttq._i=ttq._i||{};
+      ttq._i[e]=[];
+      ttq._i[e]._u=r;
+      ttq._t=ttq._t||{};
+      ttq._t[e]=+new Date;
+      ttq._o=ttq._o||{};
+      ttq._o[e]=n||{};
+      n=document.createElement("script");
+      n.type="text/javascript";
+      n.async=!0;
+      n.src=r+"?sdkid="+e+"&lib="+t;
+      e=document.getElementsByTagName("script")[0];
+      e.parentNode.insertBefore(n,e)
+    };
 
-$ch = curl_init("https://business-api.tiktok.com/open_api/v1.3/event/track/");
-curl_setopt($ch, CURLOPT_HTTPHEADER, [
-  "Access-Token: $accessToken",
-  "Content-Type: application/json"
-]);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($payload));
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    ttq.load('D5TLVB3C77U581RV2810');
+    ttq.page();
 
-$response = curl_exec($ch);
-curl_close($ch);
+    /* Download Event */
+    ttq.track('Download', {
+      event_source: 'web',
+      event_source_id: 'D5TLVB3C77U581RV2810'
+    });
+  }(window, document, 'ttq');
+  </script>
 
-// Optional logging
-// file_put_contents('tiktok_log.txt', $response . PHP_EOL, FILE_APPEND);
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: radial-gradient(circle at top, #eef6ff, #ffffff);
+      color: #111;
+      text-align: center;
+    }
 
-http_response_code(200);
-echo "OK";
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 30px 20px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff9800, #ff5722);
+      color: #fff;
+      padding: 6px 18px;
+      border-radius: 30px;
+      font-size: 14px;
+      box-shadow: 0 6px 18px rgba(255,87,34,0.35);
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 46px;
+      margin: 10px 0 25px;
+      font-weight: 700;
+    }
+
+    h1 span {
+      color: #0a71c1;
+    }
+
+    .btn {
+      display: block;
+      max-width: 320px;
+      margin: 12px auto;
+      padding: 18px 0;
+      font-size: 22px;
+      font-weight: 600;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 14px;
+      background: linear-gradient(135deg, #0a71c1, #1aa3ff);
+      box-shadow: 0 12px 30px rgba(26,163,255,0.45);
+    }
+
+    .btn.secondary {
+      background: linear-gradient(135deg, #10a850, #1fd97a);
+      box-shadow: 0 12px 30px rgba(31,217,122,0.45);
+    }
+
+    .image-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 30px 0;
+    }
+
+    .image-card {
+      background: #fff;
+      padding: 14px;
+      border-radius: 22px;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+      max-width: 100%;
+    }
+
+    .image-card img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 16px;
+    }
+
+    .urdu-text {
+      font-size: 18px;
+      line-height: 1.9;
+      margin-top: 20px;
+      color: #222;
+    }
+
+    .urdu-text span {
+      color: #0a71c1;
+      font-weight: 600;
+    }
+
+    .trust {
+      margin-top: 20px;
+      font-size: 15px;
+      color: #555;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 32px;
+      }
+      .btn {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="badge">🔥 MOST PLAYED IN PAKISTAN</div>
+
+    <h1>Pakistan ki <span>NO 1</span> Game</h1>
+
+    <a href="https://tinyurl.com/mwfza8kt" class="btn">DOWNLOAD NOW</a>
+    <a href="https://tinyurl.com/mwfza8kt" class="btn secondary">PLAY FLYINGCHESS</a>
+
+    <div class="image-wrapper">
+      <div class="image-card">
+        <img src="https://rummygrands.org/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-23-at-7.26.48-PM.webp" alt="FlyingChess App">
+      </div>
+    </div>
+
+    <div class="urdu-text">
+      ابھی <span>FlyingChess</span> ڈاؤن لوڈ کریں اور شاندار گیمنگ کا لطف اٹھائیں۔<br>
+      پاکستان کی تیز ترین، محفوظ اور سب سے زیادہ کھیلی جانے والی گیم۔<br>
+      آسان کھیل، زبردست انٹرٹینمنٹ — سب ایک ایپ میں!
+    </div>
+
+    <div class="trust">
+      ✔ Fast Download &nbsp;•&nbsp; ✔ Smooth Gameplay &nbsp;•&nbsp; ✔ Trusted by Players
+    </div>
+
+  </div>
+</body>
+</html>
