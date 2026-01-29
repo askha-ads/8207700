@@ -4,19 +4,45 @@
   <meta charset="UTF-8">
   <title>FlyingChess – Pakistan No 1 Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- TikTok Pixel Code Start -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
 
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);
+    ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e};
+    ttq.load=function(e,n){
+      var r="https://analytics.tiktok.com/i18n/pixel/events.js";
+      ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r;
+      ttq._t=ttq._t||{},ttq._t[e]=+new Date;
+      ttq._o=ttq._o||{},ttq._o[e]=n||{};
+      var s=document.createElement("script");
+      s.type="text/javascript";s.async=!0;
+      s.src=r+"?sdkid="+e+"&lib="+t;
+      var x=document.getElementsByTagName("script")[0];
+      x.parentNode.insertBefore(s,x);
+    };
 
-  ttq.load('D5TL63BC77UECCBSFML0');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- TikTok Pixel Code End -->
+    ttq.load('D5TL63BC77UECCBSFML0');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+
+  <!-- View Content Event -->
+  <script>
+    window.addEventListener('load', function () {
+      ttq.track('ViewContent', {
+        contents: [{
+          content_id: 'flyingchess_lp',
+          content_type: 'product',
+          content_name: 'FlyingChess Pakistan Landing Page'
+        }],
+        value: 0,
+        currency: 'PKR'
+      });
+    });
+  </script>
+
   <style>
     body {
       margin: 0;
@@ -72,12 +98,11 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       box-shadow: 0 12px 30px rgba(31,217,122,0.45);
     }
 
-    /* 🔥 IMAGE SECTION FIX */
     .image-wrapper {
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 30px 0;   /* controlled spacing */
+      margin: 30px 0;
     }
 
     .image-card {
@@ -88,7 +113,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
       max-width: 100%;
     }
 
-    /* ❌ NO HOVER, NO MOVEMENT */
     .image-card img {
       display: block;
       max-width: 100%;
@@ -115,12 +139,8 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     }
 
     @media (max-width: 600px) {
-      h1 {
-        font-size: 32px;
-      }
-      .btn {
-        font-size: 20px;
-      }
+      h1 { font-size: 32px; }
+      .btn { font-size: 20px; }
     }
   </style>
 </head>
@@ -135,7 +155,6 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     <a href="https://tinyurl.com/mwfza8kt" class="btn">DOWNLOAD NOW</a>
     <a href="https://tinyurl.com/mwfza8kt" class="btn secondary">PLAY FLYINGCHESS</a>
 
-    <!-- ✅ CENTERED IMAGE -->
     <div class="image-wrapper">
       <div class="image-card">
         <img src="https://rummygrands.org/wp-content/uploads/2026/01/WhatsApp-Image-2026-01-23-at-7.26.48-PM.webp" alt="FlyingChess App">
@@ -153,6 +172,23 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
     </div>
 
   </div>
+
+  <!-- Click Button Event -->
+  <script>
+    document.querySelectorAll('.btn').forEach(function(btn) {
+      btn.addEventListener('click', function () {
+        ttq.track('ClickButton', {
+          contents: [{
+            content_id: 'flyingchess_download',
+            content_type: 'product',
+            content_name: 'FlyingChess Download Click'
+          }],
+          value: 0,
+          currency: 'PKR'
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
-wuj
