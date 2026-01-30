@@ -2,127 +2,108 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Flying Chess – Play & Win</title>
+  <title>Flying Chess Game</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
- <!-- TikTok Pixel Code Start -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-
-  ttq.load('D5TLVB3C77U581RV2810');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- TikTok Pixel Code End -->
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+  
+  
+    ttq.load('D5TLVB3C77U581RV2810');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
 
   <style>
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f9fc;
-      color: #111;
-      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
     }
 
     .container {
-      max-width: 420px;
-      margin: auto;
-      padding: 20px;
-    }
-
-    .badge {
-      display: inline-block;
-      background: #ff5722;
-      color: #fff;
-      padding: 6px 14px;
-      border-radius: 20px;
-      font-size: 13px;
-      margin-bottom: 12px;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      text-align: center;
     }
 
     h1 {
-      font-size: 28px;
-      margin: 10px 0;
+      font-size: 32px;
+      margin-bottom: 16px;
     }
 
     p {
       font-size: 16px;
       line-height: 1.6;
-      margin: 12px 0;
-    }
-
-    .app-image {
-      margin: 20px 0;
-    }
-
-    .app-image img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 16px 0;
-      margin-top: 14px;
-      font-size: 18px;
-      font-weight: bold;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 12px;
-      background: linear-gradient(135deg, #0a71c1, #1aa3ff);
+      margin-bottom: 24px;
+      color: #374151;
     }
 
     .features {
-      margin-top: 20px;
-      font-size: 14px;
-      color: #444;
+      text-align: left;
+      margin: 24px 0;
     }
 
-    .features span {
-      display: block;
-      margin: 6px 0;
+    .features li {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      font-size: 16px;
+      background-color: #2563eb;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
     }
 
     .footer {
-      margin-top: 18px;
-      font-size: 12px;
-      color: #777;
+      margin-top: 40px;
+      font-size: 13px;
+      color: #6b7280;
     }
   </style>
 </head>
 
 <body>
+
   <div class="container">
-
-    <div class="badge">🔥 Trending on TikTok</div>
-
     <h1>Flying Chess Game</h1>
 
     <p>
-      Play Flying Chess online and enjoy fast gameplay, exciting rewards,  
-      and smooth performance. Join thousands of players now!
+      Enjoy the classic Flying Chess board game designed for casual fun and friendly competition.
+      Play anytime, challenge friends, and experience a smooth and enjoyable game experience.
     </p>
 
+    <ul class="features">
+      <li>✔ Easy to play classic board game</li>
+      <li>✔ Smooth and fast gameplay</li>
+      <li>✔ Play with friends or solo</li>
+      <li>✔ Designed for entertainment and fun</li>
+    </ul>
+
     <a href="https://tinyurl.com/mwfza8kt" class="btn">
-      Download & Play Now
+      Install Game
     </a>
 
-    <div class="features">
-      <span>✔ Easy to Play</span>
-      <span>✔ Fast & Secure</span>
-      <span>✔ Trusted by Players</span>
-    </div>
-
     <div class="footer">
-      18+ Only | Play Responsibly
+      For Entertainment Purposes Only
     </div>
-
   </div>
+
 </body>
 </html>
